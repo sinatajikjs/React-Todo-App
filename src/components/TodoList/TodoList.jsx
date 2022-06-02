@@ -7,9 +7,11 @@ const TodoList = () => {
   const Tasks = useContext(TasksContext);
   return (
     <div className={styles.todoList}>
-      {Tasks.map((task) => (
-        <Todo task={task} key={task.id} />
-      ))}
+      {Tasks.length ? (
+        Tasks.map((task) => <Todo task={task} key={task.id} />)
+      ) : (
+        <div className={styles.emptyTasks}>There is not any tasks yet!</div>
+      )}
     </div>
   );
 };

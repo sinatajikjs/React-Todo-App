@@ -1,3 +1,13 @@
 .todoList {
   margin-top: 30px;
 }
+.emptyTasks {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 19px;
+  width: 100vw;
+  text-align: center;
+  color: #bcbcbc;
+}
