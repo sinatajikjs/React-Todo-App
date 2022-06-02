@@ -1,0 +1,78 @@
+.taskContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  height: 65px;
+  margin: 15px 0;
+  border-radius: 15px;
+  padding: 0 18px;
+  border: 1px solid #f6f6f6;
+  transition: all 0.2s;
+}
+.title {
+  display: flex;
+  align-items: center;
+}
+.trash {
+  transition: all 0.1s;
+  cursor: pointer;
+  color: #c0c0c0;
+  font-size: 19px;
+}
+.trash:hover {
+  color: #e20000;
+}
+.checkBox {
+  width: 32px;
+  height: 32px;
+  background-color: rgba(100, 199, 255, 0.4);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.input {
+  margin-left: 15px;
+  height: 35px;
+  width: 55vw;
+  font-size: 20px;
+  border: none;
+  background-color: #fff;
+  outline: none;
+  font-weight: 500;
+  color: #000;
+}
+.checkIcon {
+  opacity: 0;
+}
+
+.fakeCheckBox:checked ~ .checkIcon {
+  opacity: 1;
+}
+.fakeCheckBox:checked ~ .checkIcon {
+  font-size: 18px;
+  opacity: 1;
+  position: absolute;
+  z-index: 1;
+  transition: all 0.2s;
+}
+.fakeCheckBox {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  z-index: 2;
+  -webkit-appearance: none;
+}
+@media screen and (min-width: 500px) {
+  .fakeCheckBox {
+    cursor: pointer;
+  }
+}
+.taskContainerChecked {
+  opacity: 0.4;
+}
+.inputChecked {
+  text-decoration: line-through;
+}

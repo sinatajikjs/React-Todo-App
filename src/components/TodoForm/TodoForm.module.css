@@ -1,0 +1,92 @@
+.error {
+  background-color: #fff;
+  padding: 10px 16px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  width: 228px;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transition: all 0.3s;
+  transform: translate(-50%, 0);
+}
+.errorEnable {
+  top: 30px;
+}
+.error p {
+  display: inline;
+  font-size: 18px;
+  margin-left: 12px;
+}
+.error .icon {
+  color: #fff;
+}
+.iconContainer {
+  width: 22px;
+  height: 22px;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100vw;
+  /* margin: 20px 20px; */
+  margin-bottom: 20px;
+  padding: 0 23px;
+}
+.input {
+  border: none;
+  height: 50px;
+  width: 79%;
+  border-radius: 60px;
+  padding: 0 20px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+  outline: none;
+  font-size: 19px;
+}
+.input::placeholder {
+  font-size: 17px;
+  color: #c0c0c0;
+}
+.button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  font-size: 23px;
+  color: #c0c0c0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 500px) {
+  .input {
+    width: 85%;
+  }
+  .button {
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 800px) {
+  .input {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .input {
+    width: 93%;
+  }
+}
