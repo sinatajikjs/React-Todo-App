@@ -1,4 +1,6 @@
-# Check it out on https://rainbow-snickerdoodle-58432c.netlify.app/
+## Check it out on
+
+https://rainbow-snickerdoodle-58432c.netlify.app/
 
 # Getting Started with Create React App
 
