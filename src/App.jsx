@@ -1,6 +1,6 @@
-import TodoApp from './components/TodoApp/TodoApp';
+import TodoApp from "./components/TodoApp/TodoApp";
 const App = () => {
-  return <TodoApp/>;
+  return <TodoApp />;
 };
 
 export default App;

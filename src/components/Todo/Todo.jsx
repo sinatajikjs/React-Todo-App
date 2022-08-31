@@ -39,6 +39,7 @@ const Todo = ({ task }) => {
             onClick={() => checkHandler(task.id)}
             className={styles.fakeCheckBox}
             type="checkbox"
+            checked={task.isChecked}
           />
           <FontAwesomeIcon className={styles.checkIcon} icon={faCheck} />
         </span>

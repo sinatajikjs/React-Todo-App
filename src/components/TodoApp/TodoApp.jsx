@@ -1,7 +1,8 @@
 import TodoList from "../TodoList/TodoList";
-import React, { useReducer, createContext } from "react";
+import React, { useReducer, createContext, useEffect } from "react";
 import TodoForm from "../TodoForm/TodoForm";
 import styles from "./TodoApp.module.css";
+import useLocalStorage from "../../Hooks/useLocalStorage";
 
 export const TasksContext = createContext();
 export const dispatchContext = createContext();
@@ -10,6 +11,9 @@ const TodoApp = () => {
   const initialState = [];
   const reducer = (state, action) => {
     switch (action.type) {
+      case "loadTasks": {
+        return action.tasks;
+      }
       case "submit": {
         const newTask = {
           id: Date.now(),
@@ -42,6 +46,14 @@ const TodoApp = () => {
   };
   const [Tasks, dispatch] = useReducer(reducer, initialState);
 
+  useEffect(() => {
+    const tasks = JSON.parse(localStorage.getItem("tasks"));
+    dispatch({ type: "loadTasks", tasks });
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("tasks", JSON.stringify(Tasks));
+  }, [Tasks]);
   return (
     <TasksContext.Provider value={Tasks}>
       <dispatchContext.Provider value={dispatch}>
