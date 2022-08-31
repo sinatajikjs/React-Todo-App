@@ -2,7 +2,6 @@ import TodoList from "../TodoList/TodoList";
 import React, { useReducer, createContext, useEffect } from "react";
 import TodoForm from "../TodoForm/TodoForm";
 import styles from "./TodoApp.module.css";
-import useLocalStorage from "../../Hooks/useLocalStorage";
 
 export const TasksContext = createContext();
 export const dispatchContext = createContext();
