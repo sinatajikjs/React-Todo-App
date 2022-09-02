@@ -6,7 +6,7 @@ import { faTrash, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const Todo = ({ task }) => {
   const dispatch = useContext(dispatchContext);
-  const [InputValue, setInputValue] = useState("");
+  const [InputValue, setInputValue] = useState(task.title);
   const changeHandler = (e) => {
     setInputValue(e.target.value);
   };
@@ -39,7 +39,7 @@ const Todo = ({ task }) => {
             onClick={() => checkHandler(task.id)}
             className={styles.fakeCheckBox}
             type="checkbox"
-            checked={task.isChecked}
+            defaultChecked={task.isChecked}
           />
           <FontAwesomeIcon className={styles.checkIcon} icon={faCheck} />
         </span>
